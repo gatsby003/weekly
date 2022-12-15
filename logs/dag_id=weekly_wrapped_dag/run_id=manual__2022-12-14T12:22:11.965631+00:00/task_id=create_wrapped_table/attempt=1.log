@@ -1,0 +1,32 @@
+[2022-12-14T12:22:13.621+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.create_wrapped_table manual__2022-12-14T12:22:11.965631+00:00 [queued]>
+[2022-12-14T12:22:13.644+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.create_wrapped_table manual__2022-12-14T12:22:11.965631+00:00 [queued]>
+[2022-12-14T12:22:13.648+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T12:22:13.653+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-14T12:22:13.657+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T12:22:13.690+0000] {taskinstance.py:1304} INFO - Executing <Task(PostgresOperator): create_wrapped_table> on 2022-12-14 12:22:11.965631+00:00
+[2022-12-14T12:22:13.702+0000] {standard_task_runner.py:55} INFO - Started process 27350 to run task
+[2022-12-14T12:22:13.716+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weekly_wrapped_dag', 'create_wrapped_table', 'manual__2022-12-14T12:22:11.965631+00:00', '--job-id', '77', '--raw', '--subdir', 'DAGS_FOLDER/weekly_dag.py', '--cfg-path', '/tmp/tmpksb1una7']
+[2022-12-14T12:22:13.719+0000] {standard_task_runner.py:83} INFO - Job 77: Subtask create_wrapped_table
+[2022-12-14T12:22:13.830+0000] {task_command.py:389} INFO - Running <TaskInstance: weekly_wrapped_dag.create_wrapped_table manual__2022-12-14T12:22:11.965631+00:00 [running]> on host b92abc15fbab
+[2022-12-14T12:22:13.940+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weekly_wrapped_dag
+AIRFLOW_CTX_TASK_ID=create_wrapped_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-14T12:22:11.965631+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-14T12:22:11.965631+00:00
+[2022-12-14T12:22:13.943+0000] {sql.py:253} INFO - Executing: CREATE TABLE IF NOT EXISTS weekly_wrapped (
+    user_id INTEGER REFERENCES users (id),
+    wrapped JSON
+);
+[2022-12-14T12:22:13.969+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-14T12:22:14.235+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-14T12:22:14.244+0000] {sql.py:364} INFO - Running statement: CREATE TABLE IF NOT EXISTS weekly_wrapped (
+    user_id INTEGER REFERENCES users (id),
+    wrapped JSON
+);, parameters: None
+[2022-12-14T12:22:14.268+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=weekly_wrapped_dag, task_id=create_wrapped_table, execution_date=20221214T122211, start_date=20221214T122213, end_date=20221214T122214
+[2022-12-14T12:22:14.330+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-14T12:22:14.370+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

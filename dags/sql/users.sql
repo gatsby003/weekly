@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY NOT NULL,
+    email VARCHAR(256),
+    refresh_token TEXT NOT NULL
+);

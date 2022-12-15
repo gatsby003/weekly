@@ -1,0 +1,36 @@
+[2022-12-14T09:39:01.686+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_etl.load_songs manual__2022-12-14T09:38:58.228964+00:00 [queued]>
+[2022-12-14T09:39:01.693+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_etl.load_songs manual__2022-12-14T09:38:58.228964+00:00 [queued]>
+[2022-12-14T09:39:01.694+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T09:39:01.695+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-14T09:39:01.696+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T09:39:01.705+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): load_songs> on 2022-12-14 09:38:58.228964+00:00
+[2022-12-14T09:39:01.710+0000] {standard_task_runner.py:55} INFO - Started process 16157 to run task
+[2022-12-14T09:39:01.714+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'daily_spotify_etl', 'load_songs', 'manual__2022-12-14T09:38:58.228964+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpd3popuk7']
+[2022-12-14T09:39:01.719+0000] {standard_task_runner.py:83} INFO - Job 24: Subtask load_songs
+[2022-12-14T09:39:01.769+0000] {task_command.py:389} INFO - Running <TaskInstance: daily_spotify_etl.load_songs manual__2022-12-14T09:38:58.228964+00:00 [running]> on host b92abc15fbab
+[2022-12-14T09:39:01.810+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=daily_spotify_etl
+AIRFLOW_CTX_TASK_ID=load_songs
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-14T09:38:58.228964+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-14T09:38:58.228964+00:00
+[2022-12-14T09:39:02.022+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 217, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/daily_dag.py", line 112, in load_songs
+    get_songs_for_all_day()
+  File "/opt/airflow/dags/daily_dag.py", line 73, in get_songs_for_all_day
+    time_stamp = int(time.time() * 1e3)
+NameError: name 'time' is not defined
+[2022-12-14T09:39:02.036+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=daily_spotify_etl, task_id=load_songs, execution_date=20221214T093858, start_date=20221214T093901, end_date=20221214T093902
+[2022-12-14T09:39:02.049+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 24 for task load_songs (name 'time' is not defined; 16157)
+[2022-12-14T09:39:02.098+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2022-12-14T09:39:02.116+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

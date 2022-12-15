@@ -1,0 +1,47 @@
+[2022-12-14T10:35:21.719+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_etl.load_songs manual__2022-12-14T10:35:15+00:00 [queued]>
+[2022-12-14T10:35:21.725+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_etl.load_songs manual__2022-12-14T10:35:15+00:00 [queued]>
+[2022-12-14T10:35:21.726+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T10:35:21.727+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-14T10:35:21.727+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T10:35:21.735+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): load_songs> on 2022-12-14 10:35:15+00:00
+[2022-12-14T10:35:21.741+0000] {standard_task_runner.py:55} INFO - Started process 20192 to run task
+[2022-12-14T10:35:21.746+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'daily_spotify_etl', 'load_songs', 'manual__2022-12-14T10:35:15+00:00', '--job-id', '62', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmp9stkftfb']
+[2022-12-14T10:35:21.750+0000] {standard_task_runner.py:83} INFO - Job 62: Subtask load_songs
+[2022-12-14T10:35:21.811+0000] {task_command.py:389} INFO - Running <TaskInstance: daily_spotify_etl.load_songs manual__2022-12-14T10:35:15+00:00 [running]> on host b92abc15fbab
+[2022-12-14T10:35:21.858+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=daily_spotify_etl
+AIRFLOW_CTX_TASK_ID=load_songs
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-14T10:35:15+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-14T10:35:15+00:00
+[2022-12-14T10:35:22.189+0000] {logging_mixin.py:137} INFO - Token Refreshed
+[2022-12-14T10:35:22.192+0000] {logging_mixin.py:137} INFO - Running Daily Task
+[2022-12-14T10:35:22.193+0000] {logging_mixin.py:137} INFO - Getting songs for 1671014122193 slot 0
+[2022-12-14T10:35:22.448+0000] {logging_mixin.py:137} INFO - Getting songs for 1671014114993 slot 1
+[2022-12-14T10:35:22.679+0000] {logging_mixin.py:137} INFO - Getting songs for 1671014107793 slot 2
+[2022-12-14T10:35:22.973+0000] {logging_mixin.py:137} INFO - Getting songs for 1671014100593 slot 3
+[2022-12-14T10:35:23.190+0000] {logging_mixin.py:137} INFO - Getting songs for 1671014093393 slot 4
+[2022-12-14T10:35:23.401+0000] {logging_mixin.py:137} INFO - Getting songs for 1671014086193 slot 5
+[2022-12-14T10:35:23.641+0000] {logging_mixin.py:137} INFO - Getting songs for 1671014078993 slot 6
+[2022-12-14T10:35:25.233+0000] {logging_mixin.py:137} INFO - Getting songs for 1671014071793 slot 7
+[2022-12-14T10:35:25.537+0000] {logging_mixin.py:137} INFO - Getting songs for 1671014064593 slot 8
+[2022-12-14T10:35:25.846+0000] {logging_mixin.py:137} INFO - Getting songs for 1671014057393 slot 9
+[2022-12-14T10:35:26.117+0000] {logging_mixin.py:137} INFO - Getting songs for 1671014050193 slot 10
+[2022-12-14T10:35:26.371+0000] {logging_mixin.py:137} INFO - Getting songs for 1671014042993 slot 11
+[2022-12-14T10:35:26.630+0000] {logging_mixin.py:137} INFO - <class 'sqlalchemy.engine.base.Engine'>
+[2022-12-14T10:35:26.633+0000] {logging_mixin.py:137} INFO - 50
+[2022-12-14T10:35:26.681+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-14T10:35:26.713+0000] {logging_mixin.py:137} INFO - (psycopg2.errors.UndefinedColumn) column "index" of relation "history" does not exist
+LINE 1: INSERT INTO history (index, name, played_at, album_name, art...
+                             ^
+
+[SQL: INSERT INTO history (index, name, played_at, album_name, artist_name, user_id) VALUES (%(index)s, %(name)s, %(played_at)s, %(album_name)s, %(artist_name)s, %(user_id)s)]
+[parameters: ({'index': 0, 'name': 'Wind in Our Sail', 'played_at': '2022-12-14T05:17:22.577Z', 'album_name': 'Weezer (White Album) [Deluxe Edition]', 'artist_name': 'Weezer', 'user_id': '{{ params.user_id }}'}, {'index': 1, 'name': 'California Kids', 'played_at': '2022-12-14T05:14:29.067Z', 'album_name': 'Weezer (White Album) [Deluxe Edition]', 'artist_name': 'Weezer', 'user_id': '{{ params.user_id }}'}, {'index': 2, 'name': 'Vultures - Live at the House of Blues, Chicago, Illinois, September 22, 2005', 'played_at': '2022-12-13T07:13:00.365Z', 'album_name': 'TRY! - Live In Concert', 'artist_name': 'John Mayer', 'user_id': '{{ params.user_id }}'}, {'index': 3, 'name': 'Try - Live at the House of Blues, Chicago, Illinois, September 22, 2005', 'played_at': '2022-12-13T07:11:58.076Z', 'album_name': 'TRY! - Live In Concert', 'artist_name': 'John Mayer', 'user_id': '{{ params.user_id }}'}, {'index': 4, 'name': 'Wait Until Tomorrow - Live at the House of Blues, Chicago, Illinois, September 22, 2005', 'played_at': '2022-12-13T07:05:04.537Z', 'album_name': 'TRY! - Live In Concert', 'artist_name': 'John Mayer', 'user_id': '{{ params.user_id }}'}, {'index': 5, 'name': 'Daughters - Live at the House of Blues, Chicago, Illinois, September 22, 2005', 'played_at': '2022-12-13T07:00:47.771Z', 'album_name': 'TRY! - Live In Concert', 'artist_name': 'John Mayer', 'user_id': '{{ params.user_id }}'}, {'index': 6, 'name': 'Who Did You Think I Was - Live at the House of Blues, Chicago, Illinois, September 22, 2005', 'played_at': '2022-12-13T06:54:24.030Z', 'album_name': 'TRY! - Live In Concert', 'artist_name': 'John Mayer', 'user_id': '{{ params.user_id }}'}, {'index': 7, 'name': 'Who Did You Think I Was - Live at the House of Blues, Chicago, Illinois, September 22, 2005', 'played_at': '2022-12-13T06:51:24.218Z', 'album_name': 'TRY! - Live In Concert', 'artist_name': 'John Mayer', 'user_id': '{{ params.user_id }}'}  ... displaying 10 of 50 total bound parameter sets ...  {'index': 48, 'name': 'Back Seat Lover', 'played_at': '2022-12-11T10:02:00.370Z', 'album_name': 'Where Does This Door Go (Deluxe Edition)', 'artist_name': 'Mayer Hawthorne', 'user_id': '{{ params.user_id }}'}, {'index': 49, 'name': 'Stitched Up (feat. John Mayer)', 'played_at': '2022-12-11T09:56:43.295Z', 'album_name': 'Possibilities (U.S. Version)', 'artist_name': 'Herbie Hancock', 'user_id': '{{ params.user_id }}'})]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+[2022-12-14T10:35:26.725+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-14T10:35:26.791+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=daily_spotify_etl, task_id=load_songs, execution_date=20221214T103515, start_date=20221214T103521, end_date=20221214T103526
+[2022-12-14T10:35:27.076+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-14T10:35:27.136+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

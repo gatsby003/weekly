@@ -1,0 +1,38 @@
+[2022-12-14T10:08:00.042+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_etl.create_history_table manual__2022-12-14T10:07:53.645454+00:00 [queued]>
+[2022-12-14T10:08:00.069+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_etl.create_history_table manual__2022-12-14T10:07:53.645454+00:00 [queued]>
+[2022-12-14T10:08:00.070+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T10:08:00.071+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-14T10:08:00.072+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T10:08:00.107+0000] {taskinstance.py:1304} INFO - Executing <Task(PostgresOperator): create_history_table> on 2022-12-14 10:07:53.645454+00:00
+[2022-12-14T10:08:00.153+0000] {standard_task_runner.py:55} INFO - Started process 18253 to run task
+[2022-12-14T10:08:00.164+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'daily_spotify_etl', 'create_history_table', 'manual__2022-12-14T10:07:53.645454+00:00', '--job-id', '35', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmp29pszsuy']
+[2022-12-14T10:08:00.174+0000] {standard_task_runner.py:83} INFO - Job 35: Subtask create_history_table
+[2022-12-14T10:08:00.284+0000] {task_command.py:389} INFO - Running <TaskInstance: daily_spotify_etl.create_history_table manual__2022-12-14T10:07:53.645454+00:00 [running]> on host b92abc15fbab
+[2022-12-14T10:08:00.405+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=daily_spotify_etl
+AIRFLOW_CTX_TASK_ID=create_history_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-14T10:07:53.645454+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-14T10:07:53.645454+00:00
+[2022-12-14T10:08:00.408+0000] {sql.py:253} INFO - Executing: CREATE TABLE IF NOT EXISTS history (
+    user_id INTEGER REFERENCES users (id),
+    name TEXT,
+    played_at TIMESTAMPTZ,
+    album_name TEXT,
+    artist_name TEXT
+);
+[2022-12-14T10:08:00.435+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-14T10:08:01.067+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-14T10:08:01.114+0000] {sql.py:364} INFO - Running statement: CREATE TABLE IF NOT EXISTS history (
+    user_id INTEGER REFERENCES users (id),
+    name TEXT,
+    played_at TIMESTAMPTZ,
+    album_name TEXT,
+    artist_name TEXT
+);, parameters: None
+[2022-12-14T10:08:01.139+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=daily_spotify_etl, task_id=create_history_table, execution_date=20221214T100753, start_date=20221214T100800, end_date=20221214T100801
+[2022-12-14T10:08:01.245+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-14T10:08:01.352+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

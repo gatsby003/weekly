@@ -1,0 +1,48 @@
+[2022-12-15T09:54:49.489+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.send_mail manual__2022-12-15T09:54:45.587881+00:00 [queued]>
+[2022-12-15T09:54:49.495+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.send_mail manual__2022-12-15T09:54:45.587881+00:00 [queued]>
+[2022-12-15T09:54:49.496+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-15T09:54:49.497+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-15T09:54:49.498+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-15T09:54:49.510+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): send_mail> on 2022-12-15 09:54:45.587881+00:00
+[2022-12-15T09:54:49.516+0000] {standard_task_runner.py:55} INFO - Started process 2250 to run task
+[2022-12-15T09:54:49.520+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weekly_wrapped_dag', 'send_mail', 'manual__2022-12-15T09:54:45.587881+00:00', '--job-id', '183', '--raw', '--subdir', 'DAGS_FOLDER/weekly_dag.py', '--cfg-path', '/tmp/tmpxr3mktwp']
+[2022-12-15T09:54:49.522+0000] {standard_task_runner.py:83} INFO - Job 183: Subtask send_mail
+[2022-12-15T09:54:49.604+0000] {task_command.py:389} INFO - Running <TaskInstance: weekly_wrapped_dag.send_mail manual__2022-12-15T09:54:45.587881+00:00 [running]> on host 27e6a783ec0c
+[2022-12-15T09:54:49.649+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weekly_wrapped_dag
+AIRFLOW_CTX_TASK_ID=send_mail
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-15T09:54:45.587881+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-15T09:54:45.587881+00:00
+[2022-12-15T09:54:49.656+0000] {logging_mixin.py:137} INFO - {"artist_name": "John Mayer", "count": 36} ganeshfutane3@gmail.com
+[2022-12-15T09:54:50.154+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/weekly_dag.py", line 88, in send_mail
+    response = sg.send(message)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sendgrid/base_interface.py", line 62, in send
+    return self.client.mail.send.post(request_body=message)
+  File "/home/airflow/.local/lib/python3.7/site-packages/python_http_client/client.py", line 277, in http_request
+    self._make_request(opener, request, timeout=timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/python_http_client/client.py", line 184, in _make_request
+    raise exc
+python_http_client.exceptions.ForbiddenError: HTTP Error 403: Forbidden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 217, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/weekly_dag.py", line 93, in send_mail
+    print(e.message)
+AttributeError: 'ForbiddenError' object has no attribute 'message'
+[2022-12-15T09:54:50.177+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=weekly_wrapped_dag, task_id=send_mail, execution_date=20221215T095445, start_date=20221215T095449, end_date=20221215T095450
+[2022-12-15T09:54:50.190+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 183 for task send_mail ('ForbiddenError' object has no attribute 'message'; 2250)
+[2022-12-15T09:54:50.243+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2022-12-15T09:54:50.262+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

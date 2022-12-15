@@ -1,0 +1,41 @@
+[2022-12-14T10:26:16.127+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_etl.load_songs manual__2022-12-14T10:26:04.716299+00:00 [queued]>
+[2022-12-14T10:26:16.166+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_etl.load_songs manual__2022-12-14T10:26:04.716299+00:00 [queued]>
+[2022-12-14T10:26:16.168+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T10:26:16.170+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-14T10:26:16.171+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T10:26:16.201+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): load_songs> on 2022-12-14 10:26:04.716299+00:00
+[2022-12-14T10:26:16.263+0000] {standard_task_runner.py:55} INFO - Started process 19547 to run task
+[2022-12-14T10:26:16.296+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'daily_spotify_etl', 'load_songs', 'manual__2022-12-14T10:26:04.716299+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmp3k184j34']
+[2022-12-14T10:26:16.334+0000] {standard_task_runner.py:83} INFO - Job 54: Subtask load_songs
+[2022-12-14T10:26:16.571+0000] {task_command.py:389} INFO - Running <TaskInstance: daily_spotify_etl.load_songs manual__2022-12-14T10:26:04.716299+00:00 [running]> on host b92abc15fbab
+[2022-12-14T10:26:16.656+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=daily_spotify_etl
+AIRFLOW_CTX_TASK_ID=load_songs
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-14T10:26:04.716299+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-14T10:26:04.716299+00:00
+[2022-12-14T10:26:17.229+0000] {logging_mixin.py:137} INFO - Token Refreshed
+[2022-12-14T10:26:17.231+0000] {logging_mixin.py:137} INFO - Running Daily Task
+[2022-12-14T10:26:17.234+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013577234 slot 0
+[2022-12-14T10:26:18.659+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013570034 slot 1
+[2022-12-14T10:26:18.925+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013562834 slot 2
+[2022-12-14T10:26:19.232+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013555634 slot 3
+[2022-12-14T10:26:19.471+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013548434 slot 4
+[2022-12-14T10:26:19.690+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013541234 slot 5
+[2022-12-14T10:26:19.929+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013534034 slot 6
+[2022-12-14T10:26:25.440+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013526834 slot 7
+[2022-12-14T10:26:26.333+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013519634 slot 8
+[2022-12-14T10:26:27.212+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013512434 slot 9
+[2022-12-14T10:26:27.653+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013505234 slot 10
+[2022-12-14T10:26:28.095+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013498034 slot 11
+[2022-12-14T10:26:28.732+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-14T10:26:28.756+0000] {logging_mixin.py:137} INFO - invalid input syntax for type integer: "n"
+LINE 1: INSERT INTO history  VALUES ('n','a','m','e')
+                                     ^
+[2022-12-14T10:26:28.786+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-14T10:26:28.836+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=daily_spotify_etl, task_id=load_songs, execution_date=20221214T102604, start_date=20221214T102616, end_date=20221214T102628
+[2022-12-14T10:26:29.732+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-14T10:26:30.143+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

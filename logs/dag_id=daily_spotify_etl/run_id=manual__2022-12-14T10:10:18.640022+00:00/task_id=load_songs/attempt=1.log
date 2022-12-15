@@ -1,0 +1,40 @@
+[2022-12-14T10:10:26.216+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_etl.load_songs manual__2022-12-14T10:10:18.640022+00:00 [queued]>
+[2022-12-14T10:10:26.232+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_etl.load_songs manual__2022-12-14T10:10:18.640022+00:00 [queued]>
+[2022-12-14T10:10:26.233+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T10:10:26.235+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-14T10:10:26.237+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T10:10:26.249+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): load_songs> on 2022-12-14 10:10:18.640022+00:00
+[2022-12-14T10:10:26.272+0000] {standard_task_runner.py:55} INFO - Started process 18429 to run task
+[2022-12-14T10:10:26.284+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'daily_spotify_etl', 'load_songs', 'manual__2022-12-14T10:10:18.640022+00:00', '--job-id', '38', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpileymwl1']
+[2022-12-14T10:10:26.294+0000] {standard_task_runner.py:83} INFO - Job 38: Subtask load_songs
+[2022-12-14T10:10:26.368+0000] {task_command.py:389} INFO - Running <TaskInstance: daily_spotify_etl.load_songs manual__2022-12-14T10:10:18.640022+00:00 [running]> on host b92abc15fbab
+[2022-12-14T10:10:26.443+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=daily_spotify_etl
+AIRFLOW_CTX_TASK_ID=load_songs
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-14T10:10:18.640022+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-14T10:10:18.640022+00:00
+[2022-12-14T10:10:26.874+0000] {logging_mixin.py:137} INFO - Getting songs for 1671012626873 slot 0
+[2022-12-14T10:10:27.223+0000] {logging_mixin.py:137} INFO - Getting songs for 1671012619673 slot 1
+[2022-12-14T10:10:27.451+0000] {logging_mixin.py:137} INFO - Getting songs for 1671012612473 slot 2
+[2022-12-14T10:10:27.678+0000] {logging_mixin.py:137} INFO - Getting songs for 1671012605273 slot 3
+[2022-12-14T10:10:27.898+0000] {logging_mixin.py:137} INFO - Getting songs for 1671012598073 slot 4
+[2022-12-14T10:10:28.132+0000] {logging_mixin.py:137} INFO - Getting songs for 1671012590873 slot 5
+[2022-12-14T10:10:28.410+0000] {logging_mixin.py:137} INFO - Getting songs for 1671012583673 slot 6
+[2022-12-14T10:10:28.705+0000] {logging_mixin.py:137} INFO - Getting songs for 1671012576473 slot 7
+[2022-12-14T10:10:34.808+0000] {logging_mixin.py:137} INFO - Getting songs for 1671012569273 slot 8
+[2022-12-14T10:10:35.477+0000] {logging_mixin.py:137} INFO - Getting songs for 1671012562073 slot 9
+[2022-12-14T10:10:36.214+0000] {logging_mixin.py:137} INFO - Getting songs for 1671012554873 slot 10
+[2022-12-14T10:10:36.550+0000] {logging_mixin.py:137} INFO - Getting songs for 1671012547673 slot 11
+[2022-12-14T10:10:37.605+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-14T10:10:37.713+0000] {logging_mixin.py:137} INFO - <class 'psycopg2.extensions.connection'>
+[2022-12-14T10:10:38.082+0000] {logging_mixin.py:137} INFO - Execution failed on sql 'SELECT name FROM sqlite_master WHERE type='table' AND name=?;': relation "sqlite_master" does not exist
+LINE 1: SELECT name FROM sqlite_master WHERE type='table' AND name=?...
+                         ^
+[2022-12-14T10:10:38.108+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-14T10:10:38.727+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=daily_spotify_etl, task_id=load_songs, execution_date=20221214T101018, start_date=20221214T101026, end_date=20221214T101038
+[2022-12-14T10:10:41.014+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-14T10:10:41.454+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

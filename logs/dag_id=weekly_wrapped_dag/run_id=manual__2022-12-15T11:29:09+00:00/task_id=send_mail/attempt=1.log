@@ -1,0 +1,38 @@
+[2022-12-15T11:29:16.678+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.send_mail manual__2022-12-15T11:29:09+00:00 [queued]>
+[2022-12-15T11:29:16.690+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.send_mail manual__2022-12-15T11:29:09+00:00 [queued]>
+[2022-12-15T11:29:16.692+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-15T11:29:16.695+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-15T11:29:16.697+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-15T11:29:16.715+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): send_mail> on 2022-12-15 11:29:09+00:00
+[2022-12-15T11:29:16.727+0000] {standard_task_runner.py:55} INFO - Started process 9172 to run task
+[2022-12-15T11:29:16.731+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weekly_wrapped_dag', 'send_mail', 'manual__2022-12-15T11:29:09+00:00', '--job-id', '225', '--raw', '--subdir', 'DAGS_FOLDER/weekly_dag.py', '--cfg-path', '/tmp/tmpgh4n7iy1']
+[2022-12-15T11:29:16.733+0000] {standard_task_runner.py:83} INFO - Job 225: Subtask send_mail
+[2022-12-15T11:29:16.789+0000] {task_command.py:389} INFO - Running <TaskInstance: weekly_wrapped_dag.send_mail manual__2022-12-15T11:29:09+00:00 [running]> on host 27e6a783ec0c
+[2022-12-15T11:29:16.827+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weekly_wrapped_dag
+AIRFLOW_CTX_TASK_ID=send_mail
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-15T11:29:09+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-15T11:29:09+00:00
+[2022-12-15T11:29:16.836+0000] {logging_mixin.py:137} INFO - [{"artist_name": "John Mayer", "count": 36}, {"artist_name": "Red Hot Chili Peppers", "count": 18}, {"artist_name": "Bob Dylan", "count": 12}] ganeshfutane3@gmail.com
+[2022-12-15T11:29:16.841+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-15T11:29:18.250+0000] {logging_mixin.py:137} INFO - 202
+[2022-12-15T11:29:18.255+0000] {logging_mixin.py:137} INFO - b''
+[2022-12-15T11:29:18.265+0000] {logging_mixin.py:137} INFO - Server: nginx
+Date: Thu, 15 Dec 2022 11:29:18 GMT
+Content-Length: 0
+Connection: close
+X-Message-Id: IipIn62aSpCpQrgaEEUJPQ
+Access-Control-Allow-Origin: https://sendgrid.api-docs.io
+Access-Control-Allow-Methods: POST
+Access-Control-Allow-Headers: Authorization, Content-Type, On-behalf-of, x-sg-elas-acl
+Access-Control-Max-Age: 600
+X-No-CORS-Reason: https://sendgrid.com/docs/Classroom/Basics/API/cors.html
+Strict-Transport-Security: max-age=600; includeSubDomains
+[2022-12-15T11:29:18.268+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-15T11:29:18.291+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=weekly_wrapped_dag, task_id=send_mail, execution_date=20221215T112909, start_date=20221215T112916, end_date=20221215T112918
+[2022-12-15T11:29:18.346+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-15T11:29:18.368+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

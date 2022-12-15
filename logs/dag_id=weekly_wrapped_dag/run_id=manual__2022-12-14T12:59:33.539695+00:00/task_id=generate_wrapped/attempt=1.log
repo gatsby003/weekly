@@ -1,0 +1,43 @@
+[2022-12-14T12:59:41.248+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.generate_wrapped manual__2022-12-14T12:59:33.539695+00:00 [queued]>
+[2022-12-14T12:59:41.285+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.generate_wrapped manual__2022-12-14T12:59:33.539695+00:00 [queued]>
+[2022-12-14T12:59:41.287+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T12:59:41.290+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-14T12:59:41.292+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T12:59:41.326+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): generate_wrapped> on 2022-12-14 12:59:33.539695+00:00
+[2022-12-14T12:59:41.361+0000] {standard_task_runner.py:55} INFO - Started process 30067 to run task
+[2022-12-14T12:59:41.386+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weekly_wrapped_dag', 'generate_wrapped', 'manual__2022-12-14T12:59:33.539695+00:00', '--job-id', '124', '--raw', '--subdir', 'DAGS_FOLDER/weekly_dag.py', '--cfg-path', '/tmp/tmp5dscxp_g']
+[2022-12-14T12:59:41.405+0000] {standard_task_runner.py:83} INFO - Job 124: Subtask generate_wrapped
+[2022-12-14T12:59:41.644+0000] {task_command.py:389} INFO - Running <TaskInstance: weekly_wrapped_dag.generate_wrapped manual__2022-12-14T12:59:33.539695+00:00 [running]> on host b92abc15fbab
+[2022-12-14T12:59:41.859+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weekly_wrapped_dag
+AIRFLOW_CTX_TASK_ID=generate_wrapped
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-14T12:59:33.539695+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-14T12:59:33.539695+00:00
+[2022-12-14T12:59:41.888+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-14T12:59:41.901+0000] {logging_mixin.py:137} INFO - [{'artist_name': 'John Mayer', 'count': 12}, {'artist_name': 'Red Hot Chili Peppers', 'count': 6}, {'artist_name': 'Family of the Year', 'count': 4}]
+[2022-12-14T12:59:41.903+0000] {logging_mixin.py:137} INFO - [{"artist_name": "John Mayer", "count": 12}, {"artist_name": "Red Hot Chili Peppers", "count": 6}, {"artist_name": "Family of the Year", "count": 4}]
+[2022-12-14T12:59:41.909+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 217, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/weekly_dag.py", line 60, in generate_wrapped
+    cursor.execute(store_wrapped_query)
+psycopg2.errors.SyntaxError: syntax error at or near "["
+LINE 1: ...INTO weekly_wrapped (user_id, wrapped) VALUES (1, [{"artist_...
+                                                             ^
+
+[2022-12-14T12:59:41.937+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=weekly_wrapped_dag, task_id=generate_wrapped, execution_date=20221214T125933, start_date=20221214T125941, end_date=20221214T125941
+[2022-12-14T12:59:41.978+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 124 for task generate_wrapped (syntax error at or near "["
+LINE 1: ...INTO weekly_wrapped (user_id, wrapped) VALUES (1, [{"artist_...
+                                                             ^
+; 30067)
+[2022-12-14T12:59:42.061+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2022-12-14T12:59:42.115+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

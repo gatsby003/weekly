@@ -1,0 +1,48 @@
+[2022-12-14T08:40:16.271+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_etl.spotify_refresh_token manual__2022-12-14T08:40:13.274556+00:00 [queued]>
+[2022-12-14T08:40:16.281+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_etl.spotify_refresh_token manual__2022-12-14T08:40:13.274556+00:00 [queued]>
+[2022-12-14T08:40:16.283+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T08:40:16.283+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-14T08:40:16.284+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T08:40:16.294+0000] {taskinstance.py:1304} INFO - Executing <Task(SimpleHttpOperator): spotify_refresh_token> on 2022-12-14 08:40:13.274556+00:00
+[2022-12-14T08:40:16.303+0000] {standard_task_runner.py:55} INFO - Started process 11872 to run task
+[2022-12-14T08:40:16.307+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'daily_spotify_etl', 'spotify_refresh_token', 'manual__2022-12-14T08:40:13.274556+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmp_2kyx_by']
+[2022-12-14T08:40:16.311+0000] {standard_task_runner.py:83} INFO - Job 7: Subtask spotify_refresh_token
+[2022-12-14T08:40:16.359+0000] {task_command.py:389} INFO - Running <TaskInstance: daily_spotify_etl.spotify_refresh_token manual__2022-12-14T08:40:13.274556+00:00 [running]> on host b92abc15fbab
+[2022-12-14T08:40:16.442+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=daily_spotify_etl
+AIRFLOW_CTX_TASK_ID=spotify_refresh_token
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-14T08:40:13.274556+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-14T08:40:13.274556+00:00
+[2022-12-14T08:40:16.444+0000] {http.py:123} INFO - Calling HTTP method
+[2022-12-14T08:40:16.457+0000] {base.py:73} INFO - Using connection ID 'access_token_spotify' for task execution.
+[2022-12-14T08:40:16.461+0000] {http.py:150} INFO - Sending 'POST' to url: https://accounts.spotify.com/api/token
+[2022-12-14T08:40:16.802+0000] {http.py:163} ERROR - HTTP error: Bad Request
+[2022-12-14T08:40:16.803+0000] {http.py:164} ERROR - {"error":"invalid_client","error_description":"Invalid client"}
+[2022-12-14T08:40:16.819+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 161, in check_response
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://accounts.spotify.com/api/token
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/operators/http.py", line 125, in execute
+    response = http.run(self.endpoint, self.data, self.headers, self.extra_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 151, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 204, in run_and_check
+    self.check_response(response)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 165, in check_response
+    raise AirflowException(str(response.status_code) + ":" + response.reason)
+airflow.exceptions.AirflowException: 400:Bad Request
+[2022-12-14T08:40:16.831+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=daily_spotify_etl, task_id=spotify_refresh_token, execution_date=20221214T084013, start_date=20221214T084016, end_date=20221214T084016
+[2022-12-14T08:40:16.857+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 7 for task spotify_refresh_token (400:Bad Request; 11872)
+[2022-12-14T08:40:16.928+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2022-12-14T08:40:16.997+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

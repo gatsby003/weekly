@@ -1,0 +1,41 @@
+[2022-12-14T10:31:56.004+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_etl.load_songs manual__2022-12-14T10:31:46.910713+00:00 [queued]>
+[2022-12-14T10:31:56.051+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_etl.load_songs manual__2022-12-14T10:31:46.910713+00:00 [queued]>
+[2022-12-14T10:31:56.057+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T10:31:56.059+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-14T10:31:56.066+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T10:31:56.131+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): load_songs> on 2022-12-14 10:31:46.910713+00:00
+[2022-12-14T10:31:56.198+0000] {standard_task_runner.py:55} INFO - Started process 19948 to run task
+[2022-12-14T10:31:56.237+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'daily_spotify_etl', 'load_songs', 'manual__2022-12-14T10:31:46.910713+00:00', '--job-id', '56', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmp1a2yk7f0']
+[2022-12-14T10:31:56.254+0000] {standard_task_runner.py:83} INFO - Job 56: Subtask load_songs
+[2022-12-14T10:31:56.598+0000] {task_command.py:389} INFO - Running <TaskInstance: daily_spotify_etl.load_songs manual__2022-12-14T10:31:46.910713+00:00 [running]> on host b92abc15fbab
+[2022-12-14T10:31:56.695+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=daily_spotify_etl
+AIRFLOW_CTX_TASK_ID=load_songs
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-14T10:31:46.910713+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-14T10:31:46.910713+00:00
+[2022-12-14T10:31:57.171+0000] {logging_mixin.py:137} INFO - Token Refreshed
+[2022-12-14T10:31:57.173+0000] {logging_mixin.py:137} INFO - Running Daily Task
+[2022-12-14T10:31:57.176+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013917176 slot 0
+[2022-12-14T10:31:57.444+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013909976 slot 1
+[2022-12-14T10:31:57.679+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013902776 slot 2
+[2022-12-14T10:31:57.901+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013895576 slot 3
+[2022-12-14T10:31:58.125+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013888376 slot 4
+[2022-12-14T10:31:58.365+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013881176 slot 5
+[2022-12-14T10:31:58.616+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013873976 slot 6
+[2022-12-14T10:31:58.838+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013866776 slot 7
+[2022-12-14T10:32:02.045+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013859576 slot 8
+[2022-12-14T10:32:02.424+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013852376 slot 9
+[2022-12-14T10:32:02.631+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013845176 slot 10
+[2022-12-14T10:32:02.890+0000] {logging_mixin.py:137} INFO - Getting songs for 1671013837976 slot 11
+[2022-12-14T10:32:03.169+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-14T10:32:03.186+0000] {logging_mixin.py:137} INFO - <class 'sqlalchemy.engine.base.Engine'>
+[2022-12-14T10:32:03.188+0000] {logging_mixin.py:137} INFO - 50
+[2022-12-14T10:32:03.207+0000] {logging_mixin.py:137} INFO - 'psycopg2.extensions.connection' object is not callable
+[2022-12-14T10:32:03.209+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-14T10:32:03.226+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=daily_spotify_etl, task_id=load_songs, execution_date=20221214T103146, start_date=20221214T103156, end_date=20221214T103203
+[2022-12-14T10:32:03.434+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-14T10:32:03.508+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

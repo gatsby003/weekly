@@ -1,0 +1,26 @@
+[2022-12-15T11:00:50.326+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.send_mail manual__2022-12-15T11:00:44+00:00 [queued]>
+[2022-12-15T11:00:50.332+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.send_mail manual__2022-12-15T11:00:44+00:00 [queued]>
+[2022-12-15T11:00:50.333+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-15T11:00:50.334+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-15T11:00:50.334+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-15T11:00:50.341+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): send_mail> on 2022-12-15 11:00:44+00:00
+[2022-12-15T11:00:50.347+0000] {standard_task_runner.py:55} INFO - Started process 7076 to run task
+[2022-12-15T11:00:50.350+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weekly_wrapped_dag', 'send_mail', 'manual__2022-12-15T11:00:44+00:00', '--job-id', '207', '--raw', '--subdir', 'DAGS_FOLDER/weekly_dag.py', '--cfg-path', '/tmp/tmptxdr9ysc']
+[2022-12-15T11:00:50.351+0000] {standard_task_runner.py:83} INFO - Job 207: Subtask send_mail
+[2022-12-15T11:00:50.389+0000] {task_command.py:389} INFO - Running <TaskInstance: weekly_wrapped_dag.send_mail manual__2022-12-15T11:00:44+00:00 [running]> on host 27e6a783ec0c
+[2022-12-15T11:00:50.427+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weekly_wrapped_dag
+AIRFLOW_CTX_TASK_ID=send_mail
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-15T11:00:44+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-15T11:00:44+00:00
+[2022-12-15T11:00:50.434+0000] {logging_mixin.py:137} INFO - {"artist_name": "John Mayer", "count": 36} ganeshfutane3@gmail.com
+[2022-12-15T11:00:50.440+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-15T11:00:50.443+0000] {logging_mixin.py:137} INFO - [('<!DOCTYPE html>\n<html lang="en">\n<head>\n    <title>My Webpage</title>\n</head>\n<body>\n    <ul id="navigation">\n    {% for item in navigation %}\n        <li><a href="{{ item.href }}">{{ item.caption }}</a></li>\n    {% endfor %}\n    </ul>\n\n    <h1>My Webpage</h1>\n    {{ a_variable }}\n\n    {# a comment #}\n</body>\n</html>',)]
+[2022-12-15T11:00:50.444+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-15T11:00:50.449+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=weekly_wrapped_dag, task_id=send_mail, execution_date=20221215T110044, start_date=20221215T110050, end_date=20221215T110050
+[2022-12-15T11:00:50.482+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-15T11:00:50.496+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

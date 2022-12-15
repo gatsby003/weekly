@@ -1,0 +1,321 @@
+[2022-12-15T11:17:56.493+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.send_mail manual__2022-12-15T11:17:47+00:00 [queued]>
+[2022-12-15T11:17:56.505+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.send_mail manual__2022-12-15T11:17:47+00:00 [queued]>
+[2022-12-15T11:17:56.506+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-15T11:17:56.507+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-15T11:17:56.507+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-15T11:17:56.519+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): send_mail> on 2022-12-15 11:17:47+00:00
+[2022-12-15T11:17:56.532+0000] {standard_task_runner.py:55} INFO - Started process 8335 to run task
+[2022-12-15T11:17:56.538+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weekly_wrapped_dag', 'send_mail', 'manual__2022-12-15T11:17:47+00:00', '--job-id', '219', '--raw', '--subdir', 'DAGS_FOLDER/weekly_dag.py', '--cfg-path', '/tmp/tmprri0th72']
+[2022-12-15T11:17:56.539+0000] {standard_task_runner.py:83} INFO - Job 219: Subtask send_mail
+[2022-12-15T11:17:56.619+0000] {task_command.py:389} INFO - Running <TaskInstance: weekly_wrapped_dag.send_mail manual__2022-12-15T11:17:47+00:00 [running]> on host 27e6a783ec0c
+[2022-12-15T11:17:56.674+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weekly_wrapped_dag
+AIRFLOW_CTX_TASK_ID=send_mail
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-15T11:17:47+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-15T11:17:47+00:00
+[2022-12-15T11:17:56.691+0000] {logging_mixin.py:137} INFO - [{"artist_name": "John Mayer", "count": 36}, {"artist_name": "Red Hot Chili Peppers", "count": 18}, {"artist_name": "Bob Dylan", "count": 12}] ganeshfutane3@gmail.com
+[2022-12-15T11:17:56.703+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-15T11:17:56.710+0000] {logging_mixin.py:137} INFO - <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Webpage</title>
+</head>
+<body>
+    <h1>Weekly Wrapped</h1>
+    <ul id="wrapped">
+    
+        <li>[</li>
+    
+        <li>{</li>
+    
+        <li>"</li>
+    
+        <li>a</li>
+    
+        <li>r</li>
+    
+        <li>t</li>
+    
+        <li>i</li>
+    
+        <li>s</li>
+    
+        <li>t</li>
+    
+        <li>_</li>
+    
+        <li>n</li>
+    
+        <li>a</li>
+    
+        <li>m</li>
+    
+        <li>e</li>
+    
+        <li>"</li>
+    
+        <li>:</li>
+    
+        <li> </li>
+    
+        <li>"</li>
+    
+        <li>J</li>
+    
+        <li>o</li>
+    
+        <li>h</li>
+    
+        <li>n</li>
+    
+        <li> </li>
+    
+        <li>M</li>
+    
+        <li>a</li>
+    
+        <li>y</li>
+    
+        <li>e</li>
+    
+        <li>r</li>
+    
+        <li>"</li>
+    
+        <li>,</li>
+    
+        <li> </li>
+    
+        <li>"</li>
+    
+        <li>c</li>
+    
+        <li>o</li>
+    
+        <li>u</li>
+    
+        <li>n</li>
+    
+        <li>t</li>
+    
+        <li>"</li>
+    
+        <li>:</li>
+    
+        <li> </li>
+    
+        <li>3</li>
+    
+        <li>6</li>
+    
+        <li>}</li>
+    
+        <li>,</li>
+    
+        <li> </li>
+    
+        <li>{</li>
+    
+        <li>"</li>
+    
+        <li>a</li>
+    
+        <li>r</li>
+    
+        <li>t</li>
+    
+        <li>i</li>
+    
+        <li>s</li>
+    
+        <li>t</li>
+    
+        <li>_</li>
+    
+        <li>n</li>
+    
+        <li>a</li>
+    
+        <li>m</li>
+    
+        <li>e</li>
+    
+        <li>"</li>
+    
+        <li>:</li>
+    
+        <li> </li>
+    
+        <li>"</li>
+    
+        <li>R</li>
+    
+        <li>e</li>
+    
+        <li>d</li>
+    
+        <li> </li>
+    
+        <li>H</li>
+    
+        <li>o</li>
+    
+        <li>t</li>
+    
+        <li> </li>
+    
+        <li>C</li>
+    
+        <li>h</li>
+    
+        <li>i</li>
+    
+        <li>l</li>
+    
+        <li>i</li>
+    
+        <li> </li>
+    
+        <li>P</li>
+    
+        <li>e</li>
+    
+        <li>p</li>
+    
+        <li>p</li>
+    
+        <li>e</li>
+    
+        <li>r</li>
+    
+        <li>s</li>
+    
+        <li>"</li>
+    
+        <li>,</li>
+    
+        <li> </li>
+    
+        <li>"</li>
+    
+        <li>c</li>
+    
+        <li>o</li>
+    
+        <li>u</li>
+    
+        <li>n</li>
+    
+        <li>t</li>
+    
+        <li>"</li>
+    
+        <li>:</li>
+    
+        <li> </li>
+    
+        <li>1</li>
+    
+        <li>8</li>
+    
+        <li>}</li>
+    
+        <li>,</li>
+    
+        <li> </li>
+    
+        <li>{</li>
+    
+        <li>"</li>
+    
+        <li>a</li>
+    
+        <li>r</li>
+    
+        <li>t</li>
+    
+        <li>i</li>
+    
+        <li>s</li>
+    
+        <li>t</li>
+    
+        <li>_</li>
+    
+        <li>n</li>
+    
+        <li>a</li>
+    
+        <li>m</li>
+    
+        <li>e</li>
+    
+        <li>"</li>
+    
+        <li>:</li>
+    
+        <li> </li>
+    
+        <li>"</li>
+    
+        <li>B</li>
+    
+        <li>o</li>
+    
+        <li>b</li>
+    
+        <li> </li>
+    
+        <li>D</li>
+    
+        <li>y</li>
+    
+        <li>l</li>
+    
+        <li>a</li>
+    
+        <li>n</li>
+    
+        <li>"</li>
+    
+        <li>,</li>
+    
+        <li> </li>
+    
+        <li>"</li>
+    
+        <li>c</li>
+    
+        <li>o</li>
+    
+        <li>u</li>
+    
+        <li>n</li>
+    
+        <li>t</li>
+    
+        <li>"</li>
+    
+        <li>:</li>
+    
+        <li> </li>
+    
+        <li>1</li>
+    
+        <li>2</li>
+    
+        <li>}</li>
+    
+        <li>]</li>
+    
+    </ul>
+</body>
+</html>
+[2022-12-15T11:17:56.714+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-15T11:17:56.722+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=weekly_wrapped_dag, task_id=send_mail, execution_date=20221215T111747, start_date=20221215T111756, end_date=20221215T111756
+[2022-12-15T11:17:56.750+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-15T11:17:56.776+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

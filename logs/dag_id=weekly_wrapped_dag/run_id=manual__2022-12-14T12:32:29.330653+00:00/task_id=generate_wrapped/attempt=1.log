@@ -1,0 +1,36 @@
+[2022-12-14T12:32:32.894+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.generate_wrapped manual__2022-12-14T12:32:29.330653+00:00 [queued]>
+[2022-12-14T12:32:32.900+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.generate_wrapped manual__2022-12-14T12:32:29.330653+00:00 [queued]>
+[2022-12-14T12:32:32.901+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T12:32:32.902+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-14T12:32:32.903+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T12:32:32.911+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): generate_wrapped> on 2022-12-14 12:32:29.330653+00:00
+[2022-12-14T12:32:32.916+0000] {standard_task_runner.py:55} INFO - Started process 28090 to run task
+[2022-12-14T12:32:32.919+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weekly_wrapped_dag', 'generate_wrapped', 'manual__2022-12-14T12:32:29.330653+00:00', '--job-id', '92', '--raw', '--subdir', 'DAGS_FOLDER/weekly_dag.py', '--cfg-path', '/tmp/tmpxyp17juv']
+[2022-12-14T12:32:32.921+0000] {standard_task_runner.py:83} INFO - Job 92: Subtask generate_wrapped
+[2022-12-14T12:32:32.964+0000] {task_command.py:389} INFO - Running <TaskInstance: weekly_wrapped_dag.generate_wrapped manual__2022-12-14T12:32:29.330653+00:00 [running]> on host b92abc15fbab
+[2022-12-14T12:32:33.011+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weekly_wrapped_dag
+AIRFLOW_CTX_TASK_ID=generate_wrapped
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-14T12:32:29.330653+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-14T12:32:29.330653+00:00
+[2022-12-14T12:32:33.017+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-14T12:32:33.021+0000] {logging_mixin.py:137} INFO - [["John Mayer", 12], ["Red Hot Chili Peppers", 6], ["Family of the Year", 4]]
+[2022-12-14T12:32:33.022+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 217, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/weekly_dag.py", line 58, in generate_wrapped
+    "played" : artist[1]
+IndexError: string index out of range
+[2022-12-14T12:32:33.031+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=weekly_wrapped_dag, task_id=generate_wrapped, execution_date=20221214T123229, start_date=20221214T123232, end_date=20221214T123233
+[2022-12-14T12:32:33.037+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 92 for task generate_wrapped (string index out of range; 28090)
+[2022-12-14T12:32:33.055+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2022-12-14T12:32:33.070+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

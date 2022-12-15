@@ -1,0 +1,42 @@
+[2022-12-14T12:52:21.906+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.generate_wrapped manual__2022-12-14T12:52:19.720504+00:00 [queued]>
+[2022-12-14T12:52:21.913+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.generate_wrapped manual__2022-12-14T12:52:19.720504+00:00 [queued]>
+[2022-12-14T12:52:21.914+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T12:52:21.915+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-14T12:52:21.916+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T12:52:21.925+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): generate_wrapped> on 2022-12-14 12:52:19.720504+00:00
+[2022-12-14T12:52:21.930+0000] {standard_task_runner.py:55} INFO - Started process 29524 to run task
+[2022-12-14T12:52:21.934+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weekly_wrapped_dag', 'generate_wrapped', 'manual__2022-12-14T12:52:19.720504+00:00', '--job-id', '114', '--raw', '--subdir', 'DAGS_FOLDER/weekly_dag.py', '--cfg-path', '/tmp/tmprg_49ebu']
+[2022-12-14T12:52:21.936+0000] {standard_task_runner.py:83} INFO - Job 114: Subtask generate_wrapped
+[2022-12-14T12:52:21.988+0000] {task_command.py:389} INFO - Running <TaskInstance: weekly_wrapped_dag.generate_wrapped manual__2022-12-14T12:52:19.720504+00:00 [running]> on host b92abc15fbab
+[2022-12-14T12:52:22.033+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weekly_wrapped_dag
+AIRFLOW_CTX_TASK_ID=generate_wrapped
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-14T12:52:19.720504+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-14T12:52:19.720504+00:00
+[2022-12-14T12:52:22.040+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-14T12:52:22.045+0000] {logging_mixin.py:137} INFO - [{'artist_name': 'John Mayer', 'count': 12}, {'artist_name': 'Red Hot Chili Peppers', 'count': 6}, {'artist_name': 'Family of the Year', 'count': 4}]
+[2022-12-14T12:52:22.047+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 217, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/weekly_dag.py", line 59, in generate_wrapped
+    cursor.execute(store_wrapped_query)
+psycopg2.errors.SyntaxError: syntax error at or near "{"
+LINE 1: ...NTO weekly_wrapped (user_id, wrapped) VALUES (1, `{{json_dat...
+                                                             ^
+
+[2022-12-14T12:52:22.055+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=weekly_wrapped_dag, task_id=generate_wrapped, execution_date=20221214T125219, start_date=20221214T125221, end_date=20221214T125222
+[2022-12-14T12:52:22.064+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 114 for task generate_wrapped (syntax error at or near "{"
+LINE 1: ...NTO weekly_wrapped (user_id, wrapped) VALUES (1, `{{json_dat...
+                                                             ^
+; 29524)
+[2022-12-14T12:52:22.111+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2022-12-14T12:52:22.126+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

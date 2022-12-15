@@ -1,0 +1,35 @@
+[2022-12-15T09:55:27.901+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.send_mail manual__2022-12-15T09:55:24.846981+00:00 [queued]>
+[2022-12-15T09:55:27.907+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.send_mail manual__2022-12-15T09:55:24.846981+00:00 [queued]>
+[2022-12-15T09:55:27.908+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-15T09:55:27.909+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-15T09:55:27.909+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-15T09:55:27.919+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): send_mail> on 2022-12-15 09:55:24.846981+00:00
+[2022-12-15T09:55:27.925+0000] {standard_task_runner.py:55} INFO - Started process 2304 to run task
+[2022-12-15T09:55:27.933+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weekly_wrapped_dag', 'send_mail', 'manual__2022-12-15T09:55:24.846981+00:00', '--job-id', '189', '--raw', '--subdir', 'DAGS_FOLDER/weekly_dag.py', '--cfg-path', '/tmp/tmpueung5q9']
+[2022-12-15T09:55:27.934+0000] {standard_task_runner.py:83} INFO - Job 189: Subtask send_mail
+[2022-12-15T09:55:28.010+0000] {task_command.py:389} INFO - Running <TaskInstance: weekly_wrapped_dag.send_mail manual__2022-12-15T09:55:24.846981+00:00 [running]> on host 27e6a783ec0c
+[2022-12-15T09:55:28.074+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weekly_wrapped_dag
+AIRFLOW_CTX_TASK_ID=send_mail
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-15T09:55:24.846981+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-15T09:55:24.846981+00:00
+[2022-12-15T09:55:28.089+0000] {logging_mixin.py:137} INFO - {"artist_name": "John Mayer", "count": 36} ganeshfutane3@gmail.com
+[2022-12-15T09:55:28.092+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/decorators/base.py", line 217, in execute
+    return_value = super().execute(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/weekly_dag.py", line 86, in send_mail
+    message='wassap')
+TypeError: __init__() got an unexpected keyword argument 'message'
+[2022-12-15T09:55:28.101+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=weekly_wrapped_dag, task_id=send_mail, execution_date=20221215T095524, start_date=20221215T095527, end_date=20221215T095528
+[2022-12-15T09:55:28.119+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 189 for task send_mail (__init__() got an unexpected keyword argument 'message'; 2304)
+[2022-12-15T09:55:28.145+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2022-12-15T09:55:28.160+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

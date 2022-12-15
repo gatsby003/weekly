@@ -1,0 +1,40 @@
+[2022-12-15T07:47:52.999+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_dag.load_songs scheduled__2022-12-14T00:00:00+00:00 [queued]>
+[2022-12-15T07:47:53.005+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_dag.load_songs scheduled__2022-12-14T00:00:00+00:00 [queued]>
+[2022-12-15T07:47:53.006+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-15T07:47:53.006+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-15T07:47:53.007+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-15T07:47:53.014+0000] {taskinstance.py:1304} INFO - Executing <Task(_PythonDecoratedOperator): load_songs> on 2022-12-14 00:00:00+00:00
+[2022-12-15T07:47:53.019+0000] {standard_task_runner.py:55} INFO - Started process 1212 to run task
+[2022-12-15T07:47:53.021+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'daily_spotify_dag', 'load_songs', 'scheduled__2022-12-14T00:00:00+00:00', '--job-id', '163', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpx58dmfsy']
+[2022-12-15T07:47:53.023+0000] {standard_task_runner.py:83} INFO - Job 163: Subtask load_songs
+[2022-12-15T07:47:53.061+0000] {task_command.py:389} INFO - Running <TaskInstance: daily_spotify_dag.load_songs scheduled__2022-12-14T00:00:00+00:00 [running]> on host b92abc15fbab
+[2022-12-15T07:47:53.097+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=daily_spotify_dag
+AIRFLOW_CTX_TASK_ID=load_songs
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-14T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-12-14T00:00:00+00:00
+[2022-12-15T07:47:53.328+0000] {logging_mixin.py:137} INFO - Token Refreshed
+[2022-12-15T07:47:53.331+0000] {logging_mixin.py:137} INFO - Running Daily Task
+[2022-12-15T07:47:53.334+0000] {logging_mixin.py:137} INFO - Getting songs for 1671090473334 slot 0
+[2022-12-15T07:47:53.587+0000] {logging_mixin.py:137} INFO - Getting songs for 1671090466134 slot 1
+[2022-12-15T07:47:53.812+0000] {logging_mixin.py:137} INFO - Getting songs for 1671090458934 slot 2
+[2022-12-15T07:47:54.045+0000] {logging_mixin.py:137} INFO - Getting songs for 1671090451734 slot 3
+[2022-12-15T07:47:54.284+0000] {logging_mixin.py:137} INFO - Getting songs for 1671090444534 slot 4
+[2022-12-15T07:47:54.540+0000] {logging_mixin.py:137} INFO - Getting songs for 1671090437334 slot 5
+[2022-12-15T07:47:54.770+0000] {logging_mixin.py:137} INFO - Getting songs for 1671090430134 slot 6
+[2022-12-15T07:47:55.003+0000] {logging_mixin.py:137} INFO - Getting songs for 1671090422934 slot 7
+[2022-12-15T07:47:55.643+0000] {logging_mixin.py:137} INFO - Getting songs for 1671090415734 slot 8
+[2022-12-15T07:47:55.885+0000] {logging_mixin.py:137} INFO - Getting songs for 1671090408534 slot 9
+[2022-12-15T07:47:56.098+0000] {logging_mixin.py:137} INFO - Getting songs for 1671090401334 slot 10
+[2022-12-15T07:47:56.347+0000] {logging_mixin.py:137} INFO - Getting songs for 1671090394134 slot 11
+[2022-12-15T07:47:56.592+0000] {logging_mixin.py:137} INFO - <class 'sqlalchemy.engine.base.Engine'>
+[2022-12-15T07:47:56.594+0000] {logging_mixin.py:137} INFO - 50
+[2022-12-15T07:47:56.607+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-15T07:47:56.621+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-15T07:47:56.633+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=daily_spotify_dag, task_id=load_songs, execution_date=20221214T000000, start_date=20221215T074753, end_date=20221215T074756
+[2022-12-15T07:47:56.703+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-15T07:47:56.747+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

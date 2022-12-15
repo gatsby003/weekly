@@ -1,0 +1,54 @@
+[2022-12-14T08:37:32.564+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_etl.spotify_refresh_token manual__2022-12-14T08:37:25.330260+00:00 [queued]>
+[2022-12-14T08:37:32.585+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_etl.spotify_refresh_token manual__2022-12-14T08:37:25.330260+00:00 [queued]>
+[2022-12-14T08:37:32.587+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T08:37:32.590+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-14T08:37:32.591+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-14T08:37:32.623+0000] {taskinstance.py:1304} INFO - Executing <Task(SimpleHttpOperator): spotify_refresh_token> on 2022-12-14 08:37:25.330260+00:00
+[2022-12-14T08:37:32.661+0000] {standard_task_runner.py:55} INFO - Started process 11677 to run task
+[2022-12-14T08:37:32.706+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'daily_spotify_etl', 'spotify_refresh_token', 'manual__2022-12-14T08:37:25.330260+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmp64cznhin']
+[2022-12-14T08:37:32.805+0000] {standard_task_runner.py:83} INFO - Job 6: Subtask spotify_refresh_token
+[2022-12-14T08:37:33.725+0000] {task_command.py:389} INFO - Running <TaskInstance: daily_spotify_etl.spotify_refresh_token manual__2022-12-14T08:37:25.330260+00:00 [running]> on host b92abc15fbab
+[2022-12-14T08:37:34.382+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=daily_spotify_etl
+AIRFLOW_CTX_TASK_ID=spotify_refresh_token
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-14T08:37:25.330260+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-14T08:37:25.330260+00:00
+[2022-12-14T08:37:34.587+0000] {http.py:123} INFO - Calling HTTP method
+[2022-12-14T08:37:34.727+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-14T08:37:34.753+0000] {http.py:150} INFO - Sending 'POST' to url: ***://postgres:5432
+[2022-12-14T08:37:40.625+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 456, in send
+    conn = self.get_connection(request.url, proxies)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 358, in get_connection
+    conn = self.poolmanager.connection_from_url(url)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/poolmanager.py", line 300, in connection_from_url
+    u.host, port=u.port, scheme=u.scheme, pool_kwargs=pool_kwargs
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/poolmanager.py", line 246, in connection_from_host
+    return self.connection_from_context(request_context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/poolmanager.py", line 258, in connection_from_context
+    raise URLSchemeUnknown(scheme)
+urllib3.exceptions.URLSchemeUnknown: Not supported URL scheme ***
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/operators/http.py", line 125, in execute
+    response = http.run(self.endpoint, self.data, self.headers, self.extra_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 151, in run
+    return self.run_and_check(session, prepped_request, extra_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/http/hooks/http.py", line 201, in run_and_check
+    response = session.send(prepped_request, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 458, in send
+    raise InvalidURL(e, request=request)
+requests.exceptions.InvalidURL: Not supported URL scheme ***
+[2022-12-14T08:37:40.815+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=daily_spotify_etl, task_id=spotify_refresh_token, execution_date=20221214T083725, start_date=20221214T083732, end_date=20221214T083740
+[2022-12-14T08:37:41.350+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 6 for task spotify_refresh_token (Not supported URL scheme ***; 11677)
+[2022-12-14T08:37:41.847+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2022-12-14T08:37:41.997+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
