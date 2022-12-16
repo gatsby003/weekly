@@ -5,6 +5,14 @@ Weekly uses the Spotify API to pull your playing history and generates a weekly 
 1. Flask App : For authorizing weekly to access your spotify history
 2. Airflow : Run daily ETL jobs to load data to postgres and a weekly job to generate wrapped
 
+ETL workflow for daily ingestion of data
+
+![Screenshot 2022-12-16 at 8.12.37 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a6531cf3-5453-4dfd-a00b-893843daa1a8/Screenshot_2022-12-16_at_8.12.37_AM.png)
+
+Flow for generating wrapped and sending email
+
+![Screenshot 2022-12-16 at 8.12.58 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ac266539-1530-46d3-97b7-4535a47d93f1/Screenshot_2022-12-16_at_8.12.58_AM.png)
+
 
 ## Setup Instructions
 
