@@ -7,11 +7,11 @@ Weekly uses the Spotify API to pull your playing history and generates a weekly 
 
 ETL workflow for daily ingestion of data
 
-![Screenshot 2022-12-16 at 8.12.37 AM.png](./Screenshot_2022-12-16_at_8.12.37_AM.png)
+![Screenshot 2022-12-16 at 8.12.37 AM.png](./daily.png)
 
 Flow for generating wrapped and sending email
 
-![Screenshot 2022-12-16 at 8.12.58 AM.png](./Screenshot_2022-12-16_at_8.12.58_AM.png)
+![Screenshot 2022-12-16 at 8.12.58 AM.png](./weekly.png)
 
 
 ## Setup Instructions
