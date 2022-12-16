@@ -6,7 +6,7 @@ Weekly uses the Spotify API to pull your playing history and generates a weekly 
 2. Airflow : Run daily ETL jobs to load data to postgres and a weekly job to generate wrapped
 
 
-# Setup Instructions
+## Setup Instructions
 
 ```bash
 # initialize docker compose
