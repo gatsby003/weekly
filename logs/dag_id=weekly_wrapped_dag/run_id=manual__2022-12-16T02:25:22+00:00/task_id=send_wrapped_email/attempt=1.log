@@ -1,0 +1,40 @@
+[2022-12-16T02:25:30.199+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.send_wrapped_email manual__2022-12-16T02:25:22+00:00 [queued]>
+[2022-12-16T02:25:30.218+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.send_wrapped_email manual__2022-12-16T02:25:22+00:00 [queued]>
+[2022-12-16T02:25:30.222+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-16T02:25:30.223+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-16T02:25:30.224+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-16T02:25:30.235+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): send_wrapped_email> on 2022-12-16 02:25:22+00:00
+[2022-12-16T02:25:30.241+0000] {standard_task_runner.py:55} INFO - Started process 2838 to run task
+[2022-12-16T02:25:30.246+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weekly_wrapped_dag', 'send_wrapped_email', 'manual__2022-12-16T02:25:22+00:00', '--job-id', '43', '--raw', '--subdir', 'DAGS_FOLDER/weekly_dag.py', '--cfg-path', '/tmp/tmpnpxp4vh8']
+[2022-12-16T02:25:30.249+0000] {standard_task_runner.py:83} INFO - Job 43: Subtask send_wrapped_email
+[2022-12-16T02:25:30.315+0000] {task_command.py:389} INFO - Running <TaskInstance: weekly_wrapped_dag.send_wrapped_email manual__2022-12-16T02:25:22+00:00 [running]> on host 158c8f40aaa8
+[2022-12-16T02:25:30.370+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weekly_wrapped_dag
+AIRFLOW_CTX_TASK_ID=send_wrapped_email
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-16T02:25:22+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-16T02:25:22+00:00
+[2022-12-16T02:25:30.380+0000] {logging_mixin.py:137} INFO - [{"artist_name": "John Mayer", "count": 1128}, {"artist_name": "Colter Wall", "count": 48}, {"artist_name": "Red Hot Chili Peppers", "count": 24}] ganeshfutane3@gmail.com
+[2022-12-16T02:25:30.387+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-16T02:25:30.393+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/utils/wrapped.py", line 23, in send_wrapped_email
+    cursor.execute(template_query)
+psycopg2.errors.UndefinedTable: relation "templates" does not exist
+LINE 1: select template from templates where name='wrapped_2';
+                             ^
+
+[2022-12-16T02:25:30.403+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=weekly_wrapped_dag, task_id=send_wrapped_email, execution_date=20221216T022522, start_date=20221216T022530, end_date=20221216T022530
+[2022-12-16T02:25:30.412+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 43 for task send_wrapped_email (relation "templates" does not exist
+LINE 1: select template from templates where name='wrapped_2';
+                             ^
+; 2838)
+[2022-12-16T02:25:30.457+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2022-12-16T02:25:30.471+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

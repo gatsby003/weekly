@@ -1,0 +1,26 @@
+[2022-12-16T02:27:39.501+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.generate_wrapped manual__2022-12-16T02:27:37.145622+00:00 [queued]>
+[2022-12-16T02:27:39.507+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: weekly_wrapped_dag.generate_wrapped manual__2022-12-16T02:27:37.145622+00:00 [queued]>
+[2022-12-16T02:27:39.508+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-16T02:27:39.510+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-16T02:27:39.511+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-16T02:27:39.518+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): generate_wrapped> on 2022-12-16 02:27:37.145622+00:00
+[2022-12-16T02:27:39.523+0000] {standard_task_runner.py:55} INFO - Started process 2987 to run task
+[2022-12-16T02:27:39.526+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'weekly_wrapped_dag', 'generate_wrapped', 'manual__2022-12-16T02:27:37.145622+00:00', '--job-id', '45', '--raw', '--subdir', 'DAGS_FOLDER/weekly_dag.py', '--cfg-path', '/tmp/tmpom1rtegx']
+[2022-12-16T02:27:39.527+0000] {standard_task_runner.py:83} INFO - Job 45: Subtask generate_wrapped
+[2022-12-16T02:27:39.570+0000] {task_command.py:389} INFO - Running <TaskInstance: weekly_wrapped_dag.generate_wrapped manual__2022-12-16T02:27:37.145622+00:00 [running]> on host 158c8f40aaa8
+[2022-12-16T02:27:39.610+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=weekly_wrapped_dag
+AIRFLOW_CTX_TASK_ID=generate_wrapped
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-16T02:27:37.145622+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-16T02:27:37.145622+00:00
+[2022-12-16T02:27:39.617+0000] {base.py:73} INFO - Using connection ID 'spotify_etl' for task execution.
+[2022-12-16T02:27:39.621+0000] {logging_mixin.py:137} INFO - [{'artist_name': 'John Mayer', 'count': 1128}, {'artist_name': 'Colter Wall', 'count': 48}, {'artist_name': 'Red Hot Chili Peppers', 'count': 24}]
+[2022-12-16T02:27:39.622+0000] {logging_mixin.py:137} INFO - [{"artist_name": "John Mayer", "count": 1128}, {"artist_name": "Colter Wall", "count": 48}, {"artist_name": "Red Hot Chili Peppers", "count": 24}]
+[2022-12-16T02:27:39.624+0000] {python.py:177} INFO - Done. Returned value was: ('[{"artist_name": "John Mayer", "count": 1128}, {"artist_name": "Colter Wall", "count": 48}, {"artist_name": "Red Hot Chili Peppers", "count": 24}]', 'ganeshfutane3@gmail.com')
+[2022-12-16T02:27:39.638+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=weekly_wrapped_dag, task_id=generate_wrapped, execution_date=20221216T022737, start_date=20221216T022739, end_date=20221216T022739
+[2022-12-16T02:27:39.658+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-16T02:27:39.673+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check

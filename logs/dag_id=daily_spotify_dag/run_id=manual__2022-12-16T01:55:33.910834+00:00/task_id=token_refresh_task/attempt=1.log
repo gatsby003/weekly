@@ -1,0 +1,23 @@
+[2022-12-16T01:55:38.056+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_dag.token_refresh_task manual__2022-12-16T01:55:33.910834+00:00 [queued]>
+[2022-12-16T01:55:38.086+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: daily_spotify_dag.token_refresh_task manual__2022-12-16T01:55:33.910834+00:00 [queued]>
+[2022-12-16T01:55:38.089+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-16T01:55:38.091+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 1
+[2022-12-16T01:55:38.095+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-16T01:55:38.156+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): token_refresh_task> on 2022-12-16 01:55:33.910834+00:00
+[2022-12-16T01:55:38.187+0000] {standard_task_runner.py:55} INFO - Started process 703 to run task
+[2022-12-16T01:55:38.220+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'daily_spotify_dag', 'token_refresh_task', 'manual__2022-12-16T01:55:33.910834+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/daily_dag.py', '--cfg-path', '/tmp/tmpmrgn28ww']
+[2022-12-16T01:55:38.232+0000] {standard_task_runner.py:83} INFO - Job 21: Subtask token_refresh_task
+[2022-12-16T01:55:38.987+0000] {task_command.py:389} INFO - Running <TaskInstance: daily_spotify_dag.token_refresh_task manual__2022-12-16T01:55:33.910834+00:00 [running]> on host 158c8f40aaa8
+[2022-12-16T01:55:39.337+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=daily_spotify_dag
+AIRFLOW_CTX_TASK_ID=token_refresh_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-16T01:55:33.910834+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-16T01:55:33.910834+00:00
+[2022-12-16T01:55:39.879+0000] {python.py:177} INFO - Done. Returned value was: BQC9exk8zN2PCngRZ8k9m7G6zQJnsVkZIkEBmGO70Qg5iY4bN_Kx8mNZ75osTX-JTJX75SL7s2Jv_pkkRDt2G_fTjtwbrcVgDRLzHLbx0S_i6XPxUbrN9oRughTEElSN4FDKqxGDfyHF6wkwbEc9V-CfdHyGyn61vzu5dNNy773sp55wVOm0Y9SfMbBjWFhllogsdBtmbuyOMYE
+[2022-12-16T01:55:39.989+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=daily_spotify_dag, task_id=token_refresh_task, execution_date=20221216T015533, start_date=20221216T015538, end_date=20221216T015539
+[2022-12-16T01:55:40.098+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-16T01:55:40.259+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
