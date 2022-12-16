@@ -1,9 +1,6 @@
-# weekly
-
-ETL workflow for daily ingestion of data
+# Weekly : Weekly Spotiy Wrapped to the inbox
 
 ![logo.png](./logo.jpg)
-
 
 Weekly uses the Spotify API to pull your playing history and generates a weekly wrapped sent directly to your email. The system is implemented using Python, Airflow and Docker.
 
