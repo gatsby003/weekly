@@ -1585,3 +1585,67 @@ NameError: name 'send_mail' is not defined
 [2022-12-16T02:50:47.076+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:50:47.076+0000] {dag.py:2676} INFO - Sync 1 DAGs
 [2022-12-16T02:50:47.101+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:50:47.100+0000] {dag.py:3427} INFO - Setting next_dagrun for weekly_wrapped_dag to 2022-12-18T00:00:00+00:00, run_after=2022-12-25T00:00:00+00:00
 [2022-12-16T02:50:47.116+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/weekly_dag.py took 0.194 seconds
+[2022-12-16T02:51:17.203+0000] {processor.py:153} INFO - Started process (PID=9547) to work on /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:51:17.208+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/weekly_dag.py for tasks to queue
+[2022-12-16T02:51:17.216+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:51:17.215+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:51:17.362+0000] {logging_mixin.py:137} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py:3524 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2022-12-16T02:51:17.389+0000] {processor.py:753} INFO - DAG(s) dict_keys(['weekly_wrapped_dag']) retrieved from /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:51:17.466+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:51:17.466+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-16T02:51:17.494+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:51:17.494+0000] {dag.py:3427} INFO - Setting next_dagrun for weekly_wrapped_dag to 2022-12-18T00:00:00+00:00, run_after=2022-12-25T00:00:00+00:00
+[2022-12-16T02:51:17.511+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/weekly_dag.py took 0.318 seconds
+[2022-12-16T02:51:48.275+0000] {processor.py:153} INFO - Started process (PID=9627) to work on /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:51:48.277+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/weekly_dag.py for tasks to queue
+[2022-12-16T02:51:48.279+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:51:48.279+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:51:48.346+0000] {logging_mixin.py:137} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py:3524 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2022-12-16T02:51:48.371+0000] {processor.py:753} INFO - DAG(s) dict_keys(['weekly_wrapped_dag']) retrieved from /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:51:48.405+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:51:48.405+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-16T02:51:48.427+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:51:48.427+0000] {dag.py:3427} INFO - Setting next_dagrun for weekly_wrapped_dag to 2022-12-18T00:00:00+00:00, run_after=2022-12-25T00:00:00+00:00
+[2022-12-16T02:51:48.444+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/weekly_dag.py took 0.175 seconds
+[2022-12-16T02:52:18.872+0000] {processor.py:153} INFO - Started process (PID=9693) to work on /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:52:18.876+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/weekly_dag.py for tasks to queue
+[2022-12-16T02:52:18.878+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:52:18.878+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:52:18.960+0000] {logging_mixin.py:137} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py:3524 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2022-12-16T02:52:18.986+0000] {processor.py:753} INFO - DAG(s) dict_keys(['weekly_wrapped_dag']) retrieved from /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:52:19.028+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:52:19.027+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-16T02:52:19.049+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:52:19.049+0000] {dag.py:3427} INFO - Setting next_dagrun for weekly_wrapped_dag to 2022-12-18T00:00:00+00:00, run_after=2022-12-25T00:00:00+00:00
+[2022-12-16T02:52:19.063+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/weekly_dag.py took 0.206 seconds
+[2022-12-16T02:52:49.599+0000] {processor.py:153} INFO - Started process (PID=9772) to work on /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:52:49.602+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/weekly_dag.py for tasks to queue
+[2022-12-16T02:52:49.604+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:52:49.604+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:52:49.668+0000] {logging_mixin.py:137} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py:3524 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2022-12-16T02:52:49.685+0000] {processor.py:753} INFO - DAG(s) dict_keys(['weekly_wrapped_dag']) retrieved from /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:52:49.716+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:52:49.716+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-16T02:52:49.734+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:52:49.734+0000] {dag.py:3427} INFO - Setting next_dagrun for weekly_wrapped_dag to 2022-12-18T00:00:00+00:00, run_after=2022-12-25T00:00:00+00:00
+[2022-12-16T02:52:49.754+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/weekly_dag.py took 0.162 seconds
+[2022-12-16T02:53:19.831+0000] {processor.py:153} INFO - Started process (PID=9838) to work on /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:53:19.833+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/weekly_dag.py for tasks to queue
+[2022-12-16T02:53:19.837+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:53:19.837+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:53:19.943+0000] {logging_mixin.py:137} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py:3524 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2022-12-16T02:53:19.980+0000] {processor.py:753} INFO - DAG(s) dict_keys(['weekly_wrapped_dag']) retrieved from /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:53:20.035+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:53:20.035+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-16T02:53:20.118+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:53:20.117+0000] {dag.py:3427} INFO - Setting next_dagrun for weekly_wrapped_dag to 2022-12-18T00:00:00+00:00, run_after=2022-12-25T00:00:00+00:00
+[2022-12-16T02:53:20.162+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/weekly_dag.py took 0.340 seconds
+[2022-12-16T02:53:51.075+0000] {processor.py:153} INFO - Started process (PID=9918) to work on /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:53:51.078+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/weekly_dag.py for tasks to queue
+[2022-12-16T02:53:51.082+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:53:51.082+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:53:51.164+0000] {logging_mixin.py:137} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py:3524 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2022-12-16T02:53:51.192+0000] {processor.py:753} INFO - DAG(s) dict_keys(['weekly_wrapped_dag']) retrieved from /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:53:51.239+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:53:51.239+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-16T02:53:51.266+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:53:51.266+0000] {dag.py:3427} INFO - Setting next_dagrun for weekly_wrapped_dag to 2022-12-18T00:00:00+00:00, run_after=2022-12-25T00:00:00+00:00
+[2022-12-16T02:53:51.282+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/weekly_dag.py took 0.222 seconds
+[2022-12-16T02:54:21.944+0000] {processor.py:153} INFO - Started process (PID=9996) to work on /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:54:21.950+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/weekly_dag.py for tasks to queue
+[2022-12-16T02:54:21.951+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:54:21.951+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:54:22.053+0000] {logging_mixin.py:137} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py:3524 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2022-12-16T02:54:22.072+0000] {processor.py:753} INFO - DAG(s) dict_keys(['weekly_wrapped_dag']) retrieved from /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:54:22.103+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:54:22.103+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-16T02:54:22.128+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:54:22.128+0000] {dag.py:3427} INFO - Setting next_dagrun for weekly_wrapped_dag to 2022-12-18T00:00:00+00:00, run_after=2022-12-25T00:00:00+00:00
+[2022-12-16T02:54:22.148+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/weekly_dag.py took 0.226 seconds
+[2022-12-16T02:54:52.365+0000] {processor.py:153} INFO - Started process (PID=10066) to work on /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:54:52.367+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/weekly_dag.py for tasks to queue
+[2022-12-16T02:54:52.368+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:54:52.368+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:54:52.439+0000] {logging_mixin.py:137} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py:3524 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2022-12-16T02:54:52.463+0000] {processor.py:753} INFO - DAG(s) dict_keys(['weekly_wrapped_dag']) retrieved from /opt/airflow/dags/weekly_dag.py
+[2022-12-16T02:54:52.508+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:54:52.508+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-16T02:54:52.534+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:54:52.534+0000] {dag.py:3427} INFO - Setting next_dagrun for weekly_wrapped_dag to 2022-12-18T00:00:00+00:00, run_after=2022-12-25T00:00:00+00:00
+[2022-12-16T02:54:52.549+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/weekly_dag.py took 0.188 seconds
