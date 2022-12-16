@@ -1,3 +1,3 @@
-.config
-.logs
-.env
+./config
+./logs
+./env
