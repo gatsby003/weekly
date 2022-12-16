@@ -1,6 +1,8 @@
 # weekly
 
-![main.png](./main.png)
+ETL workflow for daily ingestion of data
+
+![logo.png](./main-1.png)
 
 
 Weekly uses the Spotify API to pull your playing history and generates a weekly wrapped sent directly to your email. The system is implemented using Python, Airflow and Docker.
