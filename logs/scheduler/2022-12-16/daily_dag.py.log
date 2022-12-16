@@ -1181,3 +1181,39 @@
 [2022-12-16T02:54:40.647+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:54:40.646+0000] {dag.py:2676} INFO - Sync 1 DAGs
 [2022-12-16T02:54:40.661+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:54:40.661+0000] {dag.py:3427} INFO - Setting next_dagrun for daily_spotify_dag to 2022-12-16T00:00:00+00:00, run_after=2022-12-17T00:00:00+00:00
 [2022-12-16T02:54:40.671+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/daily_dag.py took 0.671 seconds
+[2022-12-16T02:55:11.679+0000] {processor.py:153} INFO - Started process (PID=10125) to work on /opt/airflow/dags/daily_dag.py
+[2022-12-16T02:55:11.681+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/daily_dag.py for tasks to queue
+[2022-12-16T02:55:11.682+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:55:11.682+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/daily_dag.py
+[2022-12-16T02:55:12.333+0000] {logging_mixin.py:137} INFO - Running Daily Task
+[2022-12-16T02:55:12.337+0000] {logging_mixin.py:137} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py:3524 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2022-12-16T02:55:12.372+0000] {processor.py:753} INFO - DAG(s) dict_keys(['daily_spotify_dag']) retrieved from /opt/airflow/dags/daily_dag.py
+[2022-12-16T02:55:12.422+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:55:12.421+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-16T02:55:12.439+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:55:12.439+0000] {dag.py:3427} INFO - Setting next_dagrun for daily_spotify_dag to 2022-12-16T00:00:00+00:00, run_after=2022-12-17T00:00:00+00:00
+[2022-12-16T02:55:12.452+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/daily_dag.py took 0.778 seconds
+[2022-12-16T02:55:43.237+0000] {processor.py:153} INFO - Started process (PID=10198) to work on /opt/airflow/dags/daily_dag.py
+[2022-12-16T02:55:43.240+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/daily_dag.py for tasks to queue
+[2022-12-16T02:55:43.242+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:55:43.242+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/daily_dag.py
+[2022-12-16T02:55:43.722+0000] {logging_mixin.py:137} INFO - Running Daily Task
+[2022-12-16T02:55:43.726+0000] {logging_mixin.py:137} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py:3524 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2022-12-16T02:55:43.739+0000] {processor.py:753} INFO - DAG(s) dict_keys(['daily_spotify_dag']) retrieved from /opt/airflow/dags/daily_dag.py
+[2022-12-16T02:55:43.771+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:55:43.771+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-16T02:55:43.789+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:55:43.789+0000] {dag.py:3427} INFO - Setting next_dagrun for daily_spotify_dag to 2022-12-16T00:00:00+00:00, run_after=2022-12-17T00:00:00+00:00
+[2022-12-16T02:55:43.804+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/daily_dag.py took 0.573 seconds
+[2022-12-16T02:56:14.050+0000] {processor.py:153} INFO - Started process (PID=10286) to work on /opt/airflow/dags/daily_dag.py
+[2022-12-16T02:56:14.053+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/daily_dag.py for tasks to queue
+[2022-12-16T02:56:14.055+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:56:14.055+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/daily_dag.py
+[2022-12-16T02:56:14.542+0000] {logging_mixin.py:137} INFO - Running Daily Task
+[2022-12-16T02:56:14.546+0000] {logging_mixin.py:137} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py:3524 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2022-12-16T02:56:14.557+0000] {processor.py:753} INFO - DAG(s) dict_keys(['daily_spotify_dag']) retrieved from /opt/airflow/dags/daily_dag.py
+[2022-12-16T02:56:14.592+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:56:14.592+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-16T02:56:14.611+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:56:14.611+0000] {dag.py:3427} INFO - Setting next_dagrun for daily_spotify_dag to 2022-12-16T00:00:00+00:00, run_after=2022-12-17T00:00:00+00:00
+[2022-12-16T02:56:14.625+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/daily_dag.py took 0.581 seconds
+[2022-12-16T02:56:45.065+0000] {processor.py:153} INFO - Started process (PID=10368) to work on /opt/airflow/dags/daily_dag.py
+[2022-12-16T02:56:45.067+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/daily_dag.py for tasks to queue
+[2022-12-16T02:56:45.068+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:56:45.068+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/daily_dag.py
+[2022-12-16T02:56:45.567+0000] {logging_mixin.py:137} INFO - Running Daily Task
+[2022-12-16T02:56:45.571+0000] {logging_mixin.py:137} WARNING - /home/airflow/.local/lib/python3.7/site-packages/airflow/models/dag.py:3524 RemovedInAirflow3Warning: Param `schedule_interval` is deprecated and will be removed in a future release. Please use `schedule` instead.
+[2022-12-16T02:56:45.582+0000] {processor.py:753} INFO - DAG(s) dict_keys(['daily_spotify_dag']) retrieved from /opt/airflow/dags/daily_dag.py
+[2022-12-16T02:56:45.610+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:56:45.610+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2022-12-16T02:56:45.628+0000] {logging_mixin.py:137} INFO - [2022-12-16T02:56:45.628+0000] {dag.py:3427} INFO - Setting next_dagrun for daily_spotify_dag to 2022-12-16T00:00:00+00:00, run_after=2022-12-17T00:00:00+00:00
+[2022-12-16T02:56:45.638+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/daily_dag.py took 0.577 seconds
