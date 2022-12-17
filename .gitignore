@@ -1,5 +1,5 @@
 ./config
 logs
-./env
+*.env
 postgres-db-volume
 ./weekly-webapp/.env
