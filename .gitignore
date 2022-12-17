@@ -2,3 +2,4 @@
 logs
 ./env
 postgres-db-volume
+./weekly-webapp/.env
