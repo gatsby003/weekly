@@ -1,23 +1,23 @@
 import requests
 import base64
+from os import environ 
 from requests.models import PreparedRequest
 
 from flask import Flask, redirect, request
 
 app = Flask(__name__)
 
-CLIENT_ID = '46a828fc7c8b4ff08dc7ab18aa972293'
-CLIENT_SECRET = 'bf254fabce3b44a99ff3b7a50ee38e02'
+CLIENT_ID = environ.get('CLIENT_ID')
+CLIENT_SECRET = environ.get('CLIENT_SECRET')
 secret_string = CLIENT_ID + ":" + CLIENT_SECRET
 
 in_bytes = secret_string.encode('ascii')
 
 base64_secret_string = base64.b64encode(in_bytes).decode('ascii')
 print(base64_secret_string)
-
 url = 'https://accounts.spotify.com/authorize?'
 params = {
-            'client_id':'46a828fc7c8b4ff08dc7ab18aa972293',
+            'client_id':CLIENT_ID,
             'response_type':'code',
             'redirect_uri':'http://127.0.0.1:5000/home',
             'state':'spotify_state',
@@ -38,7 +38,7 @@ def home():
             "redirect_uri" : "http://127.0.0.1:5000/home"
         },
         headers={
-            "Authorization": 'Basic ' + 'NDZhODI4ZmM3YzhiNGZmMDhkYzdhYjE4YWE5NzIyOTM6YmYyNTRmYWJjZTNiNDRhOTlmZjNiN2E1MGVlMzhlMDI=',
+            "Authorization": 'Basic ' + base64_secret_string,
             "Content-Type": "application/x-www-form-urlencoded"
         }
     )
