@@ -31,3 +31,4 @@ docker-compose up
     - REFRESH_TOKEN - spotify
     - BEARER_TOKEN - spotify
 - Run DAG’s from the UI at [localhost:8080](http://localhost:8080) , username : airflow password : airflow
+- Set FLASK_APP=spotify-etl.py and create a env file with the following variables : CLIENT_ID and CLIENT_SECRET , refer to spotify documentation for details.
